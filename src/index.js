@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+
 function Square(props) {  
     return (
       <button className="square" 
@@ -104,6 +105,8 @@ class Board extends React.Component {
       
         return (
             <div className="game">
+            <div className='header'>Tic Tac Toe</div>
+            <div className = 'game-board-info'>
             <div className="game-board">
                 <Board squares={current.squares}
                 onClick={(i) => this.handleClick(i)} />
@@ -111,6 +114,7 @@ class Board extends React.Component {
             <div className="game-info">
                 <div>{status}</div>
                 <ol>{moves}</ol>
+            </div>
             </div>
             </div>
       );
